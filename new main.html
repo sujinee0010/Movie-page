@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> mainpage</title>
+
+<!--스타일 시트-->
+<!--기본-->
+	<style>
+
+*{margin: 30 ; padding: 30;}
+
+body {
+	margin: 0 auto;
+	width: 960px;
+	background: #EDF3FA
+}
+</style>
+<!--고정바 스타일 -->
+<style>
+#left_bar > a { text-shadow: 5px 5px 5px black ;
+	color: white; font-size: 20px; font-style: normal; padding: 0px 25px;}
+
+	#left_bar.hover > a { text-shadow: 5px 5px 5px black ;
+		color: white; font-size: 22px; font-style: normal; padding: 0px 25px;}
+
+#left_bar{
+
+		background:#1D328F;
+		position:fixed;
+		left:30px; top: 0; bottom: 0;
+		width: 200px;
+
+
+}
+
+</style>
+<!--장르 스타일 -->
+<style>
+ li >a:first-child {color: white;}
+.genre{
+	margin: 10px 10px;
+	padding: 30px 30px;
+	color: white;
+	list-style: none;
+	}
+
+	.genre.hover{
+		margin: 10px 10px;
+		padding: 30px 30px;
+		color: white;
+		font-size: 18px;
+		}
+</style>
+
+<!--최신,주간베스트 스타일 수평정렬-->
+<style>
+div.newest{
+	overflow: hidden;
+}
+div.item {
+	float: left;
+
+	margin: 0 3px;
+	padding: 10px;
+	border: 1px solid black;
+}
+div.best{
+	overflow: hidden;
+}
+div.item {
+	float: left;
+
+	margin: 0 3px;
+	padding: 10px;
+	border: 1px solid black;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--메인1 박스 스타일 -->
+<style>
+
+.main-1{
+
+	font-family: arial;
+
+	font-size: 16px;
+	font-weight: bold;
+	margin: 70px 70px;
+	padding:70px 40px 90px 90px;
+	width: 700px;
+	height: 400px;
+	background-color:#636B91;
+	color: white;
+
+}
+
+.main-1.hover{
+
+	font-family: arial;
+
+	font-size: 16px;
+	font-weight: bold;
+	margin: 70px 70px;
+	padding: 70px 40px 90px 90px;
+	width: 700px;
+	height: 400px;
+	background-color: #828CBA;
+	color: white;
+}
+
+</style>
+
+<!--메인2박스 스타일-->
+<style>
+.main-2{
+
+	font-family: arial;
+
+	font-size: 16px;
+	font-weight: bold;
+	margin: 70px 70px;
+	padding:70px 70px;
+	width: 700px;
+	height: 1300px;
+	background-color: white;
+	color: black;
+
+}
+</style>
+
+<!--스크립트-->
+
+
+<!-- 메인박스 주간베스트랑 최신 이미지 스크립트-->
+<script>
+
+window.onload = function() {
+//스릴러 기억의밤
+	var image = document.getElementById('image1');
+  image.src = 'http://image.chosun.com/sitedata/image/201710/10/2017101000543_1.jpg';
+	image.width = 99;
+	image.height = 141;
+
+//스릴러 끝까지
+	var image2 = document.getElementById('image2');
+  image2.src = 'http://movie.phinf.naver.net/20171024_139/1508812701319AUuRe_JPEG/movie_image.jpg';
+	image2.width = 99;
+	image2.height = 141;
+
+//로맨스그남자 그여자
+	var image3 = document.getElementById('image3');
+	image3.src = 'http://movie.phinf.naver.net/20171106_69/15099311101656lY5E_JPEG/movie_image.jpg';
+	image3.width = 99;
+	image3.height = 141;
+//로맨스 가을우체국
+	var image4 = document.getElementById('image4');
+  image4.src = 'http://movie.phinf.naver.net/20170929_75/1506670619106N0RlI_JPEG/movie_image.jpg';
+	image4.width = 99;
+	image4.height = 141;
+	//액션 어쌔신
+	var image5 = document.getElementById('image5');
+  image5.src = 'http://movie.phinf.naver.net/20171124_136/1511489041643z4hjC_JPEG/movie_image.jpg';
+	image5.width = 99;
+	image5.height = 141;
+	//액션 범죄도시
+	var image6 = document.getElementById('image6');
+  image6.src = 'http://movie.phinf.naver.net/20170915_299/1505458505658vbKcN_JPEG/movie_image.jpg';
+	image6.width = 99;
+	image6.height = 141;
+	//로맨스 라라랜드
+	var image7 = document.getElementById('image7');
+  image7.src = 'http://movie.phinf.naver.net/20161123_188/1479862185516tYkKO_JPEG/movie_image.jpg';
+	image7.width = 99;
+	image7.height = 141;
+	var image8 = document.getElementById('image8');
+  image8.src = 'http://movie.phinf.naver.net/20171124_136/1511489041643z4hjC_JPEG/movie_image.jpg';
+	image8.width = 99;
+	image8.height = 141;
+	var image9= document.getElementById('image9');
+  image9.src = 'http://movie.phinf.naver.net/20170919_62/1505782593457htVeC_JPEG/movie_image.jpg';
+	image9.width = 99;
+	image9.height = 141;
+	var image10 = document.getElementById('image10');
+  image10.src = 'http://movie.phinf.naver.net/20171106_69/15099311101656lY5E_JPEG/movie_image.jpg';
+	image10.width = 99;
+	image10.height = 141;
+
+
+};
+</script>
+
+<!--최신 주간 베스트 마우스 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('.main-1').hover(function (){
+	$('.main-1').addClass('hover');
+
+
+}, function () {
+
+$('.main-1').removeClass('hover');
+
+
+});
+});
+</script>
+<!-- 장르 마우스 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('.genre').hover(function (){
+	$('.genre').addClass('hover');
+
+
+}, function () {
+
+$('.genre').removeClass('hover');
+
+
+});
+});
+</script>
+
+<!-- 무비 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('#left_bar').hover(function (){
+	$('#left_bar').addClass('hover');
+
+
+}, function () {
+
+$('#left_bar').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+
+
+
+<!-- 버튼 이벤트-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('button').click(function (){
+	$('.genre').fadeToggle('slow');
+
+});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<!--본문-->
+
+<body>
+	<!--고정바-->
+ <div class="left_bar" id="left_bar">
+	<a href="new main.html"><h1>movie</h1></a>
+	<button> close & open </button>
+	 <ul class="genre" id="genre">
+		 <li id="g"><a href="스릴러.html"><h3>스릴러/공포</h3></a></li>
+		 <li id="g"><a href="로맨스.html"><h3>로맨스</h3></a></li>
+		 <li id="g"><a href="#action"><h3>액션</h3></a></li>
+
+
+		 <li id="g"><a href="#drama"><h3>드라마</h3></a></li>
+		 <li id="g"><a href="#comedy"><h3>코미디</h3></a></li>
+
+	 </ul>
+</div>
+
+	<!--최신 영화& 주간 베스트-->
+<div class="main-1">
+	<h1 class="title"></h1>
+	<p>최신개봉영화5</p>
+	<div class="newest" id="bottom">
+
+
+				<div class = "item"><a href="영화1.html"><img id= "image1" /></a></div>
+				<div class = "item"><a href="스_영화2.html"><img id= "image2"/></a></div>
+				<div class = "item"><a href="#"><img id= "image3"/></a></div>
+				<div class = "item"><a href="#"><img id= "image4"/></a></div>
+				<div class = "item"><a href="#"><img id= "image5"/></a></div>
+
+
+</div>
+<div class="best">
+
+
+		<p>주간인기영화best5</p>
+				<div class = "item"><a href="#"><img id= "image6" /></a></div>
+				<div class = "item"><a href="라라랜드.html"><img id= "image7"  /></a></div>
+				<div class = "item"><a href="#"><img id= "image8" /></a></div>
+				<div class = "item"><a href="#"><img id= "image9" /></a></div>
+				<div class = "item"><a href="#"><img id= "image10" /></a></div>
+
+
+
+</div>
+</div>
+
+<!--메인 박스 2-->
+<div class="main-2">
+<h2> 평점 </h2>
+<hr />
+<div class = "m2"><a href="#"><img id= "평점" src="평점2.jpg" /></a></div>
+<br/>
+<h2> 예고편 </h2>
+<hr />
+<div class = "m2"><a href="#"><img id= "" src="예고편.jpg" /></a></div>
+
+<hr />
+<h2> 추천 영화 </h2>
+<div class = "m2"><a href="#"><img id= "" src="추천영화.jpg" /></a></div>
+<br />
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+	</html>

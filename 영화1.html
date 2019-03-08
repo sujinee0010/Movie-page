@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> mainpage</title>
+<!--기본-->
+	<style>
+
+*{margin: 30 ; padding: 30;}
+body {
+	margin: 0 auto;
+	width: 960px;
+	background: #EDF3FA
+}
+</style>
+<!--고정바-->
+<style>
+#left_bar > a {
+	text-shadow: 5px 5px 5px black ;color: white; font-size: 20px; font-style: normal; padding: 0px 25px;}
+
+	#left_bar.hover > a { text-shadow: 5px 5px 5px black ;
+		color: white; font-size: 22px; font-style: normal; padding: 0px 25px;}
+
+.left_bar{
+
+
+		background:#1D328F;
+		position:fixed;
+		left:30px; top: 0; bottom: 0;
+		width: 200px;
+
+
+}
+</style>
+<!--장르-->
+<style>
+li >a:first-child {color: white;}
+
+.genre{
+	margin: 10px 10px;
+	padding: 30px 30px;
+	color: white;
+list-style: none;}
+
+
+		.genre.hover{
+			margin: 10px 10px;
+			padding: 30px 30px;
+			color: white;
+			font-size: 18px;
+			}
+
+</style>
+<!--영화소개전체박스-->
+<style>
+.movie1{
+
+  	font-family: arial;
+  	margin: 70px 50px;
+  	padding:50px 70px;
+  	width: 700px;
+  	height: 1200px;
+  	background-color: white;
+  	color: black;
+
+}
+
+</style>
+<!--영화소개박스 와 글정렬-->
+<style>
+#movie1{overflow: hidden;}
+#forgotten_p{float: left; width: 450px; height:250px;  }
+#forgotten_i{float: left; width: 230px; height:350px; }
+</style>
+
+
+<!-- 장르 마우스 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('.genre').hover(function (){
+	$('.genre').addClass('hover');
+
+
+}, function () {
+
+$('.genre').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+
+
+
+<!-- 버튼 이벤트-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('button').click(function (){
+	$('.genre').fadeToggle('slow');
+
+});
+});
+</script>
+
+
+<!-- 무비 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('#left_bar').hover(function (){
+	$('#left_bar').addClass('hover');
+
+
+}, function () {
+
+$('#left_bar').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<body>
+	<!--고정바-->
+ <div class="left_bar" id="left_bar">
+	 <a href="new main.html"><h1>movie</h1></a>
+	 <button> close & open </button>
+	 <ul class="genre">
+		 <li><a href="스릴러.html"><h3>스릴러/공포</h3></a></li>
+		 <li id="g"><a href="로맨스.html"><h3>로맨스</h3></a></li>
+		 <li><a href="#action"><h3>액션</h3></a></li>
+
+
+		 <li><a href="#drama"><h3>드라마</h3></a></li>
+		 <li><a href="#comedy"><h3>코미디</h3></a></li>
+
+	 </ul>
+</div>
+
+
+<!--영화소개박스-->
+<div class="movie1" id="movie1">
+  <h1>기억의 밤</h1>
+  <hr />
+<p id="forgotten_p">
+
+  <b>개요&nbsp;&nbsp;</b>  미스터리, 스릴러  한국  109분  2017 .11.29 개봉
+  <br />
+
+  <b>감독&nbsp;&nbsp;</b> 장항준
+  <br />
+
+  <b>출연&nbsp;&nbsp;</b> 강하늘(진석), 김무열(유석)
+  <br />
+
+  <b>등급&nbsp;&nbsp;</b>[국내] 15세 관람가
+  <br />
+
+  <b>흥행&nbsp;&nbsp;</b> 예매율 2위
+
+
+
+</p>
+
+<img id="forgotten_i" src="http://image.chosun.com/sitedata/image/201710/10/2017101000543_1.jpg" alt="영화1" width="300"/>
+
+
+<!--줄거리,배우/제작진,포토-->
+<div class="plot">
+<br />
+<hr />
+<h2>줄거리</h2>
+<p>새 집으로 이사 온 날 밤
+ 정체불명의 괴한들에게 납치된 형 유석.
+ 동생 진석은 형이 납치된 후
+ 매일 밤 환청과 환각에 시달리며 불안해한다.
+
+ 납치된지 19일째 되는 날 돌아온 유석은
+ 그동안의 모든 기억을 잃었다고 말한다.
+ 하지만 돌아온 뒤로 어딘가 변해버린 유석을 의심하던 진석은
+ 매일 밤 사라지는 형을 쫓던 중 충격적인 사실과 마주하게 되는데...
+
+ 두 남자의 엇갈린 기억 속 감춰진 살인사건의 진실을 찾아야만 한다!</p>
+<br />
+<hr />
+<h2>배우/제작진</h2>
+<p>
+장항준
+ 감독/
+  강하늘
+ 진석 역/
+김무열
+ 유석 역/
+문성근
+ 진석부 역/
+
+
+나영희
+ 진석모 역/
+
+남명렬
+ 최교수 역
+</p>
+<br />
+<hr />
+<h2>관련포토</h2>
+<img id="photo1" src="http://movie.phinf.naver.net/20171208_205/1512698383196hO0XP_JPEG/movie_image.jpg?type=m665_443_2" alt="포토1" width="300"/>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+	</html>

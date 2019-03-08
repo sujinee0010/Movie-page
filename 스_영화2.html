@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> mainpage</title>
+<!--기본-->
+	<style>
+
+*{margin: 30 ; padding: 30;}
+body {
+	margin: 0 auto;
+	width: 960px;
+	background: #EDF3FA
+}
+</style>
+<!--고정바-->
+<style>
+#left_bar > a {
+	text-shadow: 5px 5px 5px black ;color: white; font-size: 20px; font-style: normal; padding: 0px 25px;}
+
+	#left_bar.hover > a { text-shadow: 5px 5px 5px black ;
+		color: white; font-size: 22px; font-style: normal; padding: 0px 25px;}
+
+
+.left_bar{
+
+
+		background:#1D328F;
+		position:fixed;
+		left:30px; top: 0; bottom: 0;
+		width: 200px;
+
+
+}
+</style>
+<!--장르-->
+<style>
+li >a:first-child {color: white;}
+
+.genre{
+	margin: 10px 10px;
+	padding: 30px 30px;
+	color: white;
+list-style: none;}
+
+		.genre.hover{
+			margin: 10px 10px;
+			padding: 30px 30px;
+			color: white;
+			font-size: 18px;
+			}
+
+
+</style>
+<!--영화소개전체박스-->
+<style>
+.movie1{
+
+  	font-family:arial;
+  	margin: 70px 50px;
+  	padding:50px 70px;
+  	width: 700px;
+  	height: 1500px;
+  	background-color: white;
+  	color: black;
+
+}
+
+</style>
+<!--영화소개박스 와 글정렬-->
+<style>
+#movie1{overflow: hidden;}
+#forgotten_p{float: left; width: 450px; height:250px;  }
+#forgotten_i{float: left; width: 230px; height:350px; }
+</style>
+
+<!-- 장르 마우스 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('.genre').hover(function (){
+	$('.genre').addClass('hover');
+
+
+}, function () {
+
+$('.genre').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+
+
+
+<!-- 버튼 이벤트-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('button').click(function (){
+	$('.genre').fadeToggle('slow');
+
+});
+});
+</script>
+
+<!-- 무비 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('#left_bar').hover(function (){
+	$('#left_bar').addClass('hover');
+
+
+}, function () {
+
+$('#left_bar').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<body>
+	<!--고정바-->
+ <div class="left_bar" id="left_bar">
+	<a href="new main.html"><h1>movie</h1></a>
+	<button> close & open </button>
+	 <ul class="genre">
+		 <li><a href="#horror"><h3>스릴러/공포</h3></a></li>
+		 <li id="g"><a href="로맨스.html"><h3>로맨스</h3></a></li>
+		 <li><a href="#action"><h3>액션</h3></a></li>
+
+
+		 <li><a href="#drama"><h3>드라마</h3></a></li>
+		 <li><a href="#comedy"><h3>코미디</h3></a></li>
+
+	 </ul>
+</div>
+
+
+<!--영화소개박스-->
+<div class="movie1" id="movie1">
+  <h1>반드시 잡는다</h1>
+  <hr />
+<p id="forgotten_p">
+
+
+  <b>개요&nbsp;&nbsp;</b> 스릴러  한국  110분  2017 .11.29 개봉
+  <br />
+
+  <b>감독&nbsp;&nbsp;</b> 김홍선
+  <br />
+
+  <b>출연&nbsp;&nbsp;</b> 백윤식(심덕수), 성동일(박평달)
+
+  <br />
+
+  <b>등급&nbsp;&nbsp;</b>[국내] 15세 관람가
+  <br />
+
+  <b>흥행&nbsp;&nbsp;</b> 예매율 7위
+
+
+
+</p>
+
+<img id="forgotten_i" src="http://movie.phinf.naver.net/20171024_139/1508812701319AUuRe_JPEG/movie_image.jpg" alt="영화1" width="300"/>
+
+
+<!--줄거리,배우/제작진,포토-->
+<div class="plot">
+<br />
+<hr />
+<h2>줄거리</h2>
+<p>오늘 또 한 명이 죽었다!
+
+30년 전 해결되지 못한 장기 미제사건과 동일한 수법으로 또 다시 살인이 시작된다.
+ 동네를 꿰뚫고 있는 터줏대감 ‘심덕수(백윤식)’는
+ 사건을 잘 아는 전직 형사 ‘박평달(성동일)’과 의기투합해 범인을 잡으려 하는데…
+
+ 발보다 빠른 촉과 감으로 반드시 놈을 잡아라
+</p>
+<br />
+<hr />
+<h2>배우/제작진</h2>
+<p>
+
+
+
+	김홍선
+	 감독/
+
+
+
+	백윤식
+	 심덕수 역/
+
+
+
+	성동일
+	 박평달 역/
+
+
+
+	천호진
+	 나정혁 역/
+
+
+	배종옥
+	 민영숙 역/
+
+손종학
+	 최형사 역
+
+</p>
+<br />
+<hr />
+<h2>관련포토</h2>
+<img id="photo1" src="http://movie.phinf.naver.net/20171016_171/1508116307584MRBds_JPEG/movie_image.jpg?type=m427_320_2" alt="포토1" width="300"/>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+	</html>

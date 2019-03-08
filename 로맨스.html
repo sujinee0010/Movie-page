@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> mainpage</title>
+<!--기본-->
+	<style>
+
+*{margin: 30 ; padding: 30;}
+body {
+	margin: 0 auto;
+	width: 960px;
+	background: #EDF3FA
+}
+</style>
+<!--고정바-->
+<style>
+#left_bar > a {
+	text-shadow: 5px 5px 5px black ;color: white; font-size: 20px; font-style: normal; padding: 0px 25px;}
+
+	#left_bar.hover > a { text-shadow: 5px 5px 5px black ;
+		color: white; font-size: 22px; font-style: normal; padding: 0px 25px;}
+
+
+.left_bar{
+
+
+		background:#1D328F;
+		position:fixed;
+		left:30px; top: 0; bottom: 0;
+		width: 200px;
+
+
+}
+</style>
+<!--장르-->
+<style>
+li >a:first-child {color: white;}
+
+.genre{
+	margin: 10px 10px;
+	padding: 30px 30px;
+	color: white;
+list-style: none;}
+
+
+
+		.genre.hover{
+			margin: 10px 10px;
+			padding: 30px 30px;
+			color: white;
+			font-size: 18px;
+
+			}
+
+</style>
+<!--장르소개전체박스-->
+<style>
+.horror{
+
+  	font-family:arial;
+  	margin: 70px 50px;
+  	padding:50px 70px;
+  	width: 700px;
+  	height: 800px;
+  	background-color: white;
+  	color: black;
+
+}
+.horror > h1 {text-shadow: 10px 10px 10px black;}
+
+
+</style>
+<!--그남자 그여자정렬-->
+<style>
+#romance{overflow: hidden;}
+#forgotten_p{float: right; width: 400px; height:141px; padding: 10px 0; }
+#forgotten_i{float: right; width: 99px; height:141px; padding: 30px 100px;}
+#forgotten_i.hover {float: right; width: 100px; height:149px; padding: 30px 100px; }
+</style>
+
+
+<!--라라랜드 정렬-->
+<style>
+#horror{overflow: hidden;}
+#thechase_p{float: right; width: 400px; height:141px; padding: 10px 0; }
+#thechase_i{float: right; width: 99px; height:141px; padding: 30px 100px;}
+#thechase_i.hover {float: right; width: 100px; height:149px; padding: 30px 100px;}
+</style>
+
+<!-- 장르 마우스 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('.genre').hover(function (){
+	$('.genre').addClass('hover');
+
+
+}, function () {
+
+$('.genre').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+
+
+
+<!-- 버튼 이벤트-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('button').click(function (){
+	$('.genre').fadeToggle('slow');
+
+});
+});
+</script>
+
+<!-- 무비 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('#left_bar').hover(function (){
+	$('#left_bar').addClass('hover');
+
+
+}, function () {
+
+$('#left_bar').removeClass('hover');
+
+
+});
+});
+</script>
+
+<!-- 영화포스터1 이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('#forgotten_i').hover(function (){
+	$('#forgotten_i').addClass('hover');
+
+
+}, function () {
+
+$('#forgotten_i').removeClass('hover');
+
+
+});
+});
+</script>
+
+<!-- 영화포스터 2이벤트 조작-->
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function () {
+$('#thechase_i').hover(function (){
+	$('#thechase_i').addClass('hover');
+
+
+}, function () {
+
+$('##thechase_i').removeClass('hover');
+
+
+});
+});
+</script>
+
+
+
+<body>
+	<!--고정바-->
+ <div class="left_bar" id="left_bar">
+	<a href="new main.html"><h1>movie</h1></a>
+	<button> close & open </button>
+	 <ul class="genre">
+		 <li><a href="스릴러.html"><h3>스릴러/공포</h3></a></li>
+		 <li id="g"><a href="로맨스.html"><h3>로맨스</h3></a></li>
+		 <li><a href="#action"><h3>액션</h3></a></li>
+
+		 <li><a href="#drama"><h3>드라마</h3></a></li>
+		 <li><a href="#comedy"><h3>코미디</h3></a></li>
+
+	 </ul>
+</div>
+
+
+<!--장르소개박스-->
+<div class="horror" id="action">
+
+  <h1>로맨스</h1>
+	<hr />
+	<div class="forgotten">
+
+		<h3>그 여자 작사 그 남자 작곡 </h3>
+
+		<p id="forgotten_p">
+
+		<b>개요&nbsp;&nbsp;</b>  멜로/로맨스, 코미디  미국  103분  2017 .11.16 재개봉, 2007 .02.28 개봉
+
+		<br />
+
+		<b>감독&nbsp;&nbsp;</b> 마크 로렌스
+		<br />
+
+		<b>출연&nbsp;&nbsp;</b>  드류 베리모어(소피 피셔), 휴 그랜트(알렉스 플레처)
+		<br />
+
+		<b>등급&nbsp;&nbsp;</b>[국내] 12세 관람가 [해외] PG-13
+		<br />
+
+
+
+
+
+		</p>
+
+		<a href="그여자.html"><img id="forgotten_i" src="http://movie.phinf.naver.net/20171106_69/15099311101656lY5E_JPEG/movie_image.jpg" alt="그여자" width="300"/></a>
+
+
+
+	</div>
+	<!--라라랜드-->
+	<div class="thechase">
+</div>
+
+<hr />
+
+
+	<h3>라라랜드</h3>
+
+	<p id="thechase_p">
+
+
+
+
+	<b>개요&nbsp;&nbsp;</b>드라마, 뮤지컬, 멜로/로맨스  미국  127분  2017 .12.08 재개봉, 2016 .12.07 개봉
+	<br />
+
+	<b>감독&nbsp;&nbsp;</b>데이미언 셔젤
+
+
+	<br />
+
+	<b>출연&nbsp;&nbsp;</b> 라이언 고슬링(세바스찬), 엠마 스톤(미아)
+
+	<br />
+
+	<b>등급&nbsp;&nbsp;</b>[국내] 12세 관람가
+	<br />
+
+
+
+	</p>
+
+	<a href="라라랜드.html"><img id="thechase_i" src="http://movie.phinf.naver.net/20161123_188/1479862185516tYkKO_JPEG/movie_image.jpg" alt="라라랜드" width="300"/></a>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+	</html>
